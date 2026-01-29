@@ -11,7 +11,7 @@
 
 ## Requirements
 If you run it on a local machine without containers:
-* ROS version at least Kinetic
+* ROS version at least Noetic
 * CMake version at least 3.0.2
 * Python version at least 3.6
 * Python packages: defusedxml, rospkg, netifaces, numpy
@@ -19,6 +19,8 @@ If you run it on a local machine without containers:
 The requirements above are just suggestions. If you run into any issue, please contact organizers for help (zfxu@utexas.edu).
 
 ## Installation
+**Attention:This code is based on ROS Noetic. It can be directly run without a Singularity container under the noetic version of ROS on Ubuntu 20.04. If a container is required, please contact us (487098804@qq.com)**.
+
 Follow the instructions below to run simulations on your local machines. 
 
 ### 1. Create ROS workspace
@@ -28,7 +30,6 @@ cd /<YOUR_HOME_DIR>/jackal_ws/src
 ```
 
 ### 2. Clone this repo
-**Attention:This code is based on ROS Noetic.**
 ```
 git clone https://github.com/Triumph-lin/MyBarnChallenge.git
 ```
@@ -36,11 +37,9 @@ git clone https://github.com/Triumph-lin/MyBarnChallenge.git
 ```
 cd MyBarnChallenge
 conda env create -f barn.yaml
+conda activate barn
 ```
-Please replace the path with your desired location. 
-```
-prefix: /home/YOUR_USERNAME/miniconda3/envs/barn
-```
+
 
 ### 4. Install ROS package dependencies
 ```
